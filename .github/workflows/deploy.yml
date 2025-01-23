@@ -25,7 +25,7 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: 22
         script: |
-          cd /path/to/your/app
+          cd /charity
           git pull origin main
           npm install
           pm2 restart all
