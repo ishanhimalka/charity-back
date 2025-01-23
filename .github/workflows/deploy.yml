@@ -27,7 +27,9 @@ jobs:
         script: |
           cd charity/charity-back/
 
-          git pull 
+          git pull
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh 
           npm install
           pm2 restart all
 
