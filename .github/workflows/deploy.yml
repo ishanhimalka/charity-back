@@ -16,7 +16,9 @@ jobs:
     - name: Install Dependencies
       run: |
         npm install
-
+    - name: Node Js
+      uses: actions/setup-node@v1
+      
     - name: Deploy to Server
       uses: appleboy/ssh-action@v0.1.8
       with:
@@ -28,8 +30,6 @@ jobs:
           cd charity/charity-back/
 
           git pull
-          export NVM_DIR=~/.nvm
-          source ~/.nvm/nvm.sh 
           npm install
           pm2 restart all
 
