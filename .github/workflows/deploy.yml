@@ -26,6 +26,6 @@ jobs:
         port: 5010
         script: |
           cd /charity/charity-back
-          git pull origin main
+          git pull main
           npm install
           pm2 restart all
